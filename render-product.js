@@ -1,4 +1,7 @@
-export function renderMe (pokegoodsObject){
+
+export function renderMe(item){
+    
+    console.log(item)
     const itemCard = document.createElement('div');
     itemCard.classList.add('item-card');
     
@@ -7,7 +10,16 @@ export function renderMe (pokegoodsObject){
     
     const img = document.createElement('img');
     img.src = item.img;
+
+    const price = document.createElement('price');
+    price.textContent = item.price;
+
+    const description = document.createElement('description');
+    description.textContent = item.description;
+
+    const addButton = document.createElement('button');
+    addButton.textContent = 'Add to cart';
     
-    itemCard.append(itemHeader, img);
+    itemCard.append(itemHeader, name, img, price, description, addButton);
     return itemCard;
 }
