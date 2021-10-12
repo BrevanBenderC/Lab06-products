@@ -1,10 +1,9 @@
-import { items } from "../products";
+export function findItemById(id, goods){
+    console.log(id, goods);
+    for(let good of goods){
 
-export function findItemById(id, list){
-    for(let item of list){
-
-        if(list.id === id){
-            return item;
+        if(good.id === id){
+            return good;
         }
     }
 }
