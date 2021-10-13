@@ -10,3 +10,20 @@ test('renderME should return an HTML snippet', (expect) => {
     const actual = renderSoda(potion).outerHTML;
     expect.equal(actual, expected);
 });
+
+test('return cart if there', (expect)=>{
+    const sampleCart = [
+        { id: '1', qty: 3 },
+        { id: '3', qty: 4 },
+    ];
+    localStorage.setItem('CART', JSON.stringify(sampleCart));
+    const cart = getCart();
+    expect.deepEqual(sampleCart);
+});
+test('return empty arrat if nothing there', (expect)=>{
+  
+    localStorage.removeItem('CART');
+    const cart = getCart();
+
+    expect.deepEqual(cart, []);
+});
