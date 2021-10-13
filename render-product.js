@@ -1,7 +1,7 @@
 
 export function renderMe(item){
     
-    console.log(item)
+    console.log(item);
     const itemCard = document.createElement('div');
     itemCard.classList.add('item-card');
     
