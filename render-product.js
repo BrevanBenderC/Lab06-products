@@ -1,7 +1,7 @@
 
 export function renderMe(item){
+    //let quantity = 0;
     
-    console.log(item)
     const itemCard = document.createElement('div');
     itemCard.classList.add('item-card');
     
@@ -19,6 +19,16 @@ export function renderMe(item){
 
     const addButton = document.createElement('button');
     addButton.textContent = 'Add to cart';
+    addButton.id = item.id;
+    addButton.classList.add('buy');
+
+    const quan = document.createElement('quan');
+    quan.textContent = item.quan;
+
+    
+
+    //const qty = document.createElement('qty');
+    //qty.textContent = item.qty
     
     itemCard.append(itemHeader, name, img, price, description, addButton);
     return itemCard;

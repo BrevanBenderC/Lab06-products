@@ -8,7 +8,6 @@ export function renderItems(buyItem, itemData){
     tdName.textContent = itemData.name;
     tdQty.textContent = buyItem.qty;
     tdTotal.textContent = buyItem.qty * itemData.price;
-
     
     tr.append(tdName, tdCost, tdQty, tdTotal);
 
