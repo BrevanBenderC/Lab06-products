@@ -19,6 +19,7 @@ export const items = [
     img: 'https://www.serebii.net/itemdex/sprites/pgl/antidote.png',
     price: 100, 
     description: 'Removes the poison status effect.',
+    qty : 6
 },
     {
     id: '4',  
@@ -33,5 +34,6 @@ export const items = [
     img: 'https://www.serebii.net/itemdex/sprites/pgl/awakening.png', 
     price: 250, 
     description: 'Removes the sleep status effect.',
+    qty : 7
     },
 ];
