@@ -13,7 +13,7 @@ for (let item of items){
 
 const addButtons = document.querySelectorAll('.buy');
 for (let addBtn of addButtons){
-    addBtn.addEventListener9('click', ()=> {
-        addItem;
+    addBtn.addEventListener('click', ()=> {
+        addItem(addBtn.id);
     });
 }

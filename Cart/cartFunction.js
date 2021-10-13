@@ -13,7 +13,7 @@ export function calculateOrderToral(cart, items){
     let orderTotal = 0;
     for (let item of cart){
         const bought = findItemById(item.id, items);
-        orderTotal = orderTotal + bought.price * bought.qty;
+        orderTotal = orderTotal + bought.price * item.qty;
     }
     return orderTotal;
 }

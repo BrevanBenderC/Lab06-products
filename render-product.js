@@ -19,7 +19,7 @@ export function renderMe(item){
 
     const addButton = document.createElement('button');
     addButton.textContent = 'Add to cart';
-    addButton.id = soda.id;
+    addButton.id = item.id;
     addButton.classList.add('buy');
     
     itemCard.append(itemHeader, name, img, price, description, addButton);
