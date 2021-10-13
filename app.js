@@ -15,5 +15,6 @@ const addButtons = document.querySelectorAll('.buy');
 for (let addBtn of addButtons){
     addBtn.addEventListener('click', ()=> {
         addItem(addBtn.id);
+       
     });
 }

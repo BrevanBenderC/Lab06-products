@@ -1,4 +1,4 @@
-import { items } from '../products.js';
+
 
 
 export function findItemById(id, goods){
@@ -36,4 +36,9 @@ export function addItem(id){
     const cartString = JSON.stringify(cart);
     localStorage.setItem('CART', cartString);
 }
+export function clearCart(){
+    localStorage.removeItem('CART');
+}
+
+
 
