@@ -1,9 +1,10 @@
-import { items } from '../products.js';
-import { calculateOrderToral, findItemById, getCart } from './cartFunction.js';
+//import { items } from '../products.js';
+import { calculateOrderToral, findItemById, getCart, clearCart } from './cartFunction.js';
 import { renderItems } from './renderItems.js';
-
+import { getProducts } from '../admin/admin-functions.js';
 
 const cart = getCart();
+const items = getProducts();
 const tbody = document.getElementById('table-body');
 for (let buyItem of cart){
     const itemData = findItemById(buyItem.id, items);
@@ -17,6 +18,6 @@ tdOrderTotal.textContent = `$${orderTotal}`;
 
 const orderButton = document.getElementById('order-button');
 orderButton.addEventListener('click', ()=>{
-    localStorage.removeItem('CART');
+    clearCart();
     window.location.replace('..');
 });
