@@ -1,9 +1,5 @@
 
 
-h1 {
-    color: var(--color-5);
-}
-
 table {
     border: 2px solid rgb(119, 61, 255);
     border-collapse: collapse;

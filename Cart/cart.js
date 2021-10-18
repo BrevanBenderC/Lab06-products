@@ -1,5 +1,5 @@
 import { items } from '../products.js';
-import { calculateOrderToral, findItemById, getCart } from './cartFunction.js';
+import { calculateOrderToral, findItemById, getCart, clearCart } from './cartFunction.js';
 import { renderItems } from './renderItems.js';
 
 
@@ -17,6 +17,6 @@ tdOrderTotal.textContent = `$${orderTotal}`;
 
 const orderButton = document.getElementById('order-button');
 orderButton.addEventListener('click', ()=>{
-    localStorage.removeItem('CART');
+    clearCart();
     window.location.replace('..');
 });
